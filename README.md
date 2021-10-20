@@ -2,6 +2,19 @@
 
 > package dependency confusion; attack vector  => `@Uniswap/liquidity-staker`
 
+
+## tldr:
+
+the package name includes the versioning.
+it correctly maps to the proper
+openzeppelin-solidity however the package
+name was not taken until months afterwards 
+
+```js
+"openzeppelin-solidity-2.3.0": "npm:openzeppelin-solidity@2.3.0"
+```
+
+
 ### summary
 
 Package @uniswap/liquidity-staker was LAST published on 2020-09-11T21:35:18.599Z
