@@ -1,13 +1,68 @@
 # openzeppelin-solidity-2.3.0
 
-## attack vector  => `uniswap-liquidity-staker`
-[https://www.npmjs.com/package/uniswap-liquidity-staker](https://www.npmjs.com/package/uniswap-liquidity-staker)
+> package dependency confusion; attack vector  => `@Uniswap/liquidity-staker`
+
+### summary
+
+Package @uniswap/liquidity-staker was LAST published on 2020-09-11T21:35:18.599Z
+
+it specifices a dependency in a somewhat ambigous way
+i.e. when it's a dependenchy of a depdencny the resolution algo incorrectly points to the wrong namespace for the dependency
+
+openzeppelin-solidity-2.3.0 was FIRST created on 2021-03-16T03:45:43.211Z
+
+##### How can a package resolve a dependency that was published AFTER its latest release?
+
+> Possibly that this information is obfuscated by normal OS tooling via the way `npm pack` works: https://github.com/npm/cli/commit/58d2aa58d5f9c4db49f57a5f33952b3106778669#diff-eabad0b45ec780b8b57ae6e3d47fd7d063680bea3acdc6b98a4b45ba3b808ccc
+
+> all `*.tgz` artifacts produced have the same , more information in the details section below
+
+```diff
++        // Provide a specific date in the 1980s for the benefit of zip,
++        // which is confounded by files dated at the Unix epoch 0.
++         mtime: new Date('1985-10-26T08:15:00.000Z'),
+```
+
+<details>
+  
+  ## back to the future 2 - timestamp 
+  
+<img src=https://d.pr/i/KMn0Xo.jpg width=350 height=350>
+
+</details>
+
+
+```sh
+$ npm view @uniswap/liquidity-staker
+```
+
+```json
+{    "time": {
+        "created": "2020-09-07T20:11:36.591Z",
+        "1.0.0": "2020-09-07T20:11:36.888Z",
+        "modified": "2021-09-13T18:41:48.843Z",
+        "1.0.1": "2020-09-08T21:16:28.458Z",
+        "1.0.2": "2020-09-11T21:35:18.599Z"
+}
+```
+
+```sh
+$ npm view openzeppelin-solidity-2.3.0 time
+```
+```js
+{
+  created: '2021-03-16T03:45:43.211Z',
+  '100.0.4': '2021-03-16T03:45:43.377Z',
+  modified: '2021-03-16T03:45:45.724Z'
+}
+```
 
 [package serach on npm](https://www.npmjs.com/search?q=%40uniswap%2Fliquidity-staker)
 
-
+<pre>
 openzeppelin-solidity-2.3.0
-100.0.4 • Public • Published 7 months ago
+100.0.4 • Public • Published 7 months ago // FIRST PUBLISHED
+</pre>
 
 [https://github.com/Uniswap/liquidity-staker/blob/3edce550aeeb7b0c17a10701ff4484d6967e345f/package.json#L24](https://github.com/Uniswap/liquidity-staker/blob/3edce550aeeb7b0c17a10701ff4484d6967e345f/package.json#L24)
 
@@ -118,16 +173,6 @@ published 7 months ago by aws-ee <hackerhero+aws-ee@wearehackerone.com>
 ```
 
 
-```sh
-$ npm view openzeppelin-solidity-2.3.0 time
-```
-```js
-{
-  created: '2021-03-16T03:45:43.211Z',
-  '100.0.4': '2021-03-16T03:45:43.377Z',
-  modified: '2021-03-16T03:45:45.724Z'
-}
-```
 
 ### proper resolution 
 
