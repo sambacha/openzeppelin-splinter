@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@uniswap/liquidity-staker": "^1.0.2",
     "openzeppelin-solidity-2.3.0": "^100.0.4"
   }
 }
