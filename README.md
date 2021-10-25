@@ -14,7 +14,6 @@ name was not taken until months afterwards
 "openzeppelin-solidity-2.3.0": "npm:openzeppelin-solidity@2.3.0"
 ```
 
-
 ### summary
 
 Package @uniswap/liquidity-staker was LAST published on 2020-09-11T21:35:18.599Z
@@ -24,7 +23,12 @@ i.e. when it's a dependenchy of a depdencny the resolution algo incorrectly poin
 
 openzeppelin-solidity-2.3.0 was FIRST created on 2021-03-16T03:45:43.211Z
 
-##### How can a package resolve a dependency that was published AFTER its latest release?
+
+### Additional comments 
+
+> Helpful but not directly attributable 
+
+##### Additional factors (non substantive) How can a package resolve a dependency that was published AFTER its latest release?
 
 > Possibly that this information is obfuscated by normal OS tooling via the way `npm pack` works: https://github.com/npm/cli/commit/58d2aa58d5f9c4db49f57a5f33952b3106778669#diff-eabad0b45ec780b8b57ae6e3d47fd7d063680bea3acdc6b98a4b45ba3b808ccc
 
